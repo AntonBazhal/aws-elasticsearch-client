@@ -1,0 +1,39 @@
+{
+  "name": "aws-elasticsearch-client",
+  "version": "1.0.0",
+  "description": "Tiny wrapper for elasticsearch and http-aws-es libraries with reasonable defaults that makes work with AWS Elasticsearch Service easier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonBazhal/aws-elasticsearch-client.git"
+  },
+  "keywords": [
+    "amazon",
+    "aws",
+    "aws-es",
+    "elasticsearch",
+    "elasticsearch-js",
+    "client",
+    "http-aws-es"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npm prune",
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "author": {
+    "name": "Anton Bazhal",
+    "email": "am.bazhal@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.7.10",
+    "elasticsearch": "^12.1.0",
+    "http-aws-es": "^1.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
