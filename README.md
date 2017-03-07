@@ -39,15 +39,14 @@ const client = aeclient.create(options);
 
 ### options
 `options` object supports all the [configuration options][elasticsearch-config-url] provided by [elasticsearch library][elasticsearch-lib-url]. On top of that, `aws-elasticsearch-client` provides following configuration capabilities:
-- **[envPrefix]** - { String } the [prefix][aws-environment-credentials-class-envprefix-url] for the environment variable names used to retrieve access credentials [defaults to `AWS`]
-- **[region]** - { String } AWS region [defaults to `${options.envPrefix}_REGION` environment variable or `us-east-1`]
-- **[credentials]** - { [AWS.Credentials][aws-credentials-class-url] } an instance of [AWS.Credentials class][aws-credentials-class-url] or its descendants [defaults to [environment credentials][aws-environment-credentials-class-url] loaded using `options.envPrefix`]
+- **[region]** - { String } AWS region [defaults to `AWS_REGION` environment variable or `us-east-1`]
+- **[credentials]** - { [AWS.Credentials][aws-credentials-class-url] } an instance of [AWS.Credentials class][aws-credentials-class-url] or its descendants [defaults to [AWS.config.credentials][aws-config-credentials-url]]
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Anton Bazhal
+Copyright (c) 2016-2017 Anton Bazhal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -57,8 +56,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [aws-credentials-class-url]: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html
 [aws-elasticsearch-service-url]: https://aws.amazon.com/elasticsearch-service/
-[aws-environment-credentials-class-url]: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EnvironmentCredentials.html
-[aws-environment-credentials-class-envprefix-url]: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EnvironmentCredentials.html#envPrefix-property
+[aws-config-credentials-url]: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#credentials-property
 [ci-image]: https://circleci.com/gh/AntonBazhal/aws-elasticsearch-client.svg?style=shield&circle-token=62ce75896db92cd20f8dc1c7b2cc456c2470fa19
 [ci-url]: https://circleci.com/gh/AntonBazhal/aws-elasticsearch-client
 [dependencies-url]: https://david-dm.org/antonbazhal/aws-elasticsearch-client

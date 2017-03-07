@@ -7,11 +7,10 @@ const httpAWSES = require('http-aws-es');
 function createClient(options) {
 	options = options || {}; // eslint-disable-line no-param-reassign
 
-	const envPrefix = options.envPrefix || 'AWS';
-	const region = options.region || process.env[`${envPrefix}_REGION`] || 'us-east-1';
+	const region = options.region || process.env.AWS_REGION || 'us-east-1';
 	const credentials = options.credentials
 		? options.credentials
-		: new AWS.EnvironmentCredentials(envPrefix);
+		: AWS.config.credentials;
 
 	const config = Object.assign(
 		{},
