@@ -8,19 +8,15 @@ function createClient(options) {
 	options = options || {}; // eslint-disable-line no-param-reassign
 
 	const region = options.region || process.env.AWS_REGION || 'us-east-1';
-	const credentials = options.credentials
-		? options.credentials
-		: AWS.config.credentials;
-
 	const config = Object.assign(
 		{},
 		options,
 		{
 			connectionClass: httpAWSES,
-			amazonES: {
+			awsConfig: new AWS.Config({
 				region,
-				credentials
-			}
+				credentials: options.credentials
+			})
 		}
 	);
 
