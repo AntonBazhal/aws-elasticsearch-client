@@ -27,13 +27,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.138.0",
-    "elasticsearch": "^15.1.1",
     "http-aws-es": "^6.0.0"
   },
+  "peerDependencies": {
+    "aws-sdk": "^2.509.0",
+    "elasticsearch": "^15.5.0"
+  },
   "devDependencies": {
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "aws-sdk": "^2.509.0",
+    "elasticsearch": "^15.5.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
