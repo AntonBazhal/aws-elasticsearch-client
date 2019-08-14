@@ -10,7 +10,7 @@ Tiny wrapper for [elasticsearch][elasticsearch-lib-url] and [http-aws-es][http-a
 ## Installation
 
 ```bash
-$ npm install aws-elasticsearch-client
+$ npm install --save aws-elasticsearch-client elasticsearch aws-sdk
 ```
 
 ## Usage
