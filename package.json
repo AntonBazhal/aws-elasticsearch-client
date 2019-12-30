@@ -1,6 +1,6 @@
 {
   "name": "aws-elasticsearch-client",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Tiny wrapper for elasticsearch and http-aws-es libraries with reasonable defaults that makes work with AWS Elasticsearch Service easier",
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
   ],
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm prune",
     "lint": "eslint .",
     "test": "npm run lint"
   },
